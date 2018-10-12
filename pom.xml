@@ -15,7 +15,6 @@
         <version>1.4.0.RELEASE</version>
     </parent>
 
-
     <dependencies>
         <!-- Spring boot 核心web begin-->
         <dependency>
@@ -46,6 +45,25 @@
         </dependency>
         <!-- mysql connector end -->
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <url>
+                        http://172.17.0.144:8088/manager/text
+                    </url>
+                    <server>tomcat</server>
+                    <username>admin</username>
+                    <password>admin123</password>
+                    <path></path>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>
