@@ -63,6 +63,18 @@
                     <path></path>
                 </configuration>
             </plugin>
+            <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <configuration>
+                <archive>
+                    <manifest>
+                        <addClasspath>true</addClasspath>
+                        <mainClass>com.example.Application</mainClass>
+                    </manifest>
+                </archive>
+            </configuration>
+            </plugin>
         </plugins>
     </build>
 
